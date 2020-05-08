@@ -1,0 +1,43 @@
+.class public final synthetic LX/2pn;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field private final synthetic A00:Lcom/whatsapp/mediaview/MediaViewFragment;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/whatsapp/mediaview/MediaViewFragment;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LX/2pn;->A00:Lcom/whatsapp/mediaview/MediaViewFragment;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget-object v0, p0, LX/2pn;->A00:Lcom/whatsapp/mediaview/MediaViewFragment;
+
+    iget-object v1, v0, Lcom/whatsapp/mediaview/MediaViewFragment;->A0N:LX/3YR;
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v0, v1, LX/3YR;->A0G:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {v1}, LX/3AI;->A09()V
+
+    :cond_0
+    return-void
+.end method

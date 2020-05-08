@@ -1,0 +1,18 @@
+.class public final LX/2AN;
+.super LX/1Dm;
+.source ""
+
+# interfaces
+.implements LX/1FR;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
+
+    const-string v0, "com.google.android.gms.wearable.internal.IWearableListener"
+
+    invoke-direct {p0, p1, v0}, LX/1Dm;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
+
+    return-void
+.end method

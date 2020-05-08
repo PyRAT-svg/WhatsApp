@@ -1,0 +1,171 @@
+.class public LX/1gr;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Landroid/hardware/Camera$PictureCallback;
+
+
+# instance fields
+.field public final synthetic A00:LX/2cn;
+
+
+# direct methods
+.method public constructor <init>(LX/2cn;)V
+    .locals 0
+
+    .line 235577
+    iput-object p1, p0, LX/1gr;->A00:LX/2cn;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onPictureTaken([BLandroid/hardware/Camera;)V
+    .locals 14
+
+    iget-object v0, p0, LX/1gr;->A00:LX/2cn;
+
+    move-object v6, p1
+
+    if-nez p1, :cond_0
+
+    .line 235578
+    iget-object v0, v0, LX/2cn;->A09:LX/04f;
+
+    new-instance v1, LX/1gj;
+
+    invoke-direct {v1, p0}, LX/1gj;-><init>(LX/1gr;)V
+
+    .line 235579
+    iget-object v0, v0, LX/04f;->A02:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    .line 235580
+    :cond_0
+    iget-object v1, v0, LX/2cn;->A08:Ljava/lang/String;
+
+    .line 235581
+    invoke-static {}, LX/1gz;->A00()LX/1gz;
+
+    move-result-object v3
+
+    .line 235582
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 235583
+    invoke-virtual {v3, v1}, LX/1gz;->A01(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v8
+
+    .line 235584
+    :goto_0
+    new-instance v1, Landroid/hardware/Camera$CameraInfo;
+
+    invoke-direct {v1}, Landroid/hardware/Camera$CameraInfo;-><init>()V
+
+    .line 235585
+    iget-object v0, p0, LX/1gr;->A00:LX/2cn;
+
+    .line 235586
+    iget v0, v0, LX/2cn;->A00:I
+
+    .line 235587
+    invoke-static {v0, v1}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
+
+    .line 235588
+    iget-object v3, p0, LX/1gr;->A00:LX/2cn;
+
+    new-instance v4, LX/0gQ;
+
+    .line 235589
+    iget-object v5, v3, LX/2cn;->A05:LX/1Jc;
+
+    .line 235590
+    iget v2, v1, Landroid/hardware/Camera$CameraInfo;->facing:I
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    const/4 v7, 0x0
+
+    if-ne v2, v1, :cond_1
+
+    const/4 v7, 0x1
+
+    .line 235591
+    :cond_1
+    iget-object v9, v3, LX/2cn;->A06:LX/06A;
+
+    .line 235592
+    iget-object v10, v3, LX/2cn;->A08:Ljava/lang/String;
+
+    .line 235593
+    iget v11, v3, LX/2cn;->A01:I
+
+    .line 235594
+    iget v12, v3, LX/2cn;->A02:I
+
+    .line 235595
+    iget-object v13, v3, LX/2cn;->A07:Lcom/whatsapp/bloks/BloksCameraOverlay;
+
+    .line 235596
+    invoke-direct/range {v4 .. v13}, LX/0gQ;-><init>(LX/1Jc;[BZLjava/io/File;LX/06A;Ljava/lang/String;IILcom/whatsapp/bloks/BloksCameraOverlay;)V
+
+    new-array v0, v0, [Ljava/lang/Void;
+
+    .line 235597
+    invoke-static {v4, v0}, LX/00V;->A01(LX/0NO;[Ljava/lang/Object;)V
+
+    return-void
+
+    .line 235598
+    :cond_2
+    new-instance v1, Ljava/text/SimpleDateFormat;
+
+    const-string v0, "yyyyMMdd_HHmmss"
+
+    invoke-direct {v1, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 235599
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v0, "IMG_"
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ".png"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, LX/1gz;->A01(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v8
+
+    goto :goto_0
+.end method

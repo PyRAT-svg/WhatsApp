@@ -1,0 +1,78 @@
+.class public LX/0JE;
+.super Ljava/lang/Object;
+.source ""
+
+
+# static fields
+.field public static volatile A01:LX/0JE;
+
+
+# instance fields
+.field public final A00:LX/0JF;
+
+
+# direct methods
+.method public constructor <init>(LX/0JF;)V
+    .locals 0
+
+    .line 84335
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 84336
+    iput-object p1, p0, LX/0JE;->A00:LX/0JF;
+
+    return-void
+.end method
+
+.method public static A00()LX/0JE;
+    .locals 3
+
+    .line 84337
+    sget-object v0, LX/0JE;->A01:LX/0JE;
+
+    if-nez v0, :cond_1
+
+    .line 84338
+    const-class v2, LX/0JE;
+
+    monitor-enter v2
+
+    .line 84339
+    :try_start_0
+    sget-object v0, LX/0JE;->A01:LX/0JE;
+
+    if-nez v0, :cond_0
+
+    .line 84340
+    new-instance v1, LX/0JE;
+
+    invoke-static {}, LX/0JF;->A00()LX/0JF;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, LX/0JE;-><init>(LX/0JF;)V
+
+    sput-object v1, LX/0JE;->A01:LX/0JE;
+
+    .line 84341
+    :cond_0
+    monitor-exit v2
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    .line 84342
+    :cond_1
+    :goto_0
+    sget-object v0, LX/0JE;->A01:LX/0JE;
+
+    return-object v0
+.end method

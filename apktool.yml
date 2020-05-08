@@ -1,0 +1,39 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: whatsapp.apk
+compressionType: false
+doNotCompress:
+- arsc
+- png
+- wav
+- m4a
+- mp4
+isFrameworkApk: false
+packageInfo: null
+sdkInfo: null
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  firebase-common.properties: '8'
+  firebase-iid-interop.properties: '8'
+  firebase-iid.properties: '8'
+  firebase-measurement-connector.properties: '8'
+  firebase-messaging.properties: '8'
+  play-services-ads-identifier.properties: '8'
+  play-services-analytics-impl.properties: '8'
+  play-services-analytics.properties: '8'
+  play-services-auth-api-phone.properties: '8'
+  play-services-auth-base.properties: '8'
+  play-services-auth.properties: '8'
+  play-services-base.properties: '8'
+  play-services-basement.properties: '8'
+  play-services-location.properties: '8'
+  play-services-maps.properties: '8'
+  play-services-places-placereport.properties: '8'
+  play-services-safetynet.properties: '8'
+  play-services-stats.properties: '8'
+  play-services-tagmanager-v4-impl.properties: '8'
+  play-services-tasks.properties: '8'
+  play-services-wearable.properties: '8'
+usesFramework: null
+version: 2.3.4
+versionInfo: null
