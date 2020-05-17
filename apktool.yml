@@ -1,5 +1,5 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: whatsapp.apk
+apkFileName: wa.apk
 compressionType: false
 doNotCompress:
 - arsc
